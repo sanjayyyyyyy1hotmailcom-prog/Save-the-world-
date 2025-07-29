@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boycott Uber - Corporate Greed Must End</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .poster {
+            width: 100%;
+            max-width: 800px;
+            background: #0d1520;
+            border: 3px solid #ff3b30;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+        
+        .header {
+            background: #ff3b30;
+            padding: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.1) 10px,
+                rgba(0, 0, 0, 0.15) 10px,
+                rgba(0, 0, 0, 0.15) 20px
+            );
+        }
+        
+        h1 {
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-weight: 900;
+            text-shadow: 3px 3px 0 #000;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            margin-top: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            border: 3px solid #ff3b30;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background: #111927;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-placeholder {
+            height: 300px;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .image-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        
+        .image-description {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+        
+        .image-text {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            color: #ff9e7d;
+            border-top: 2px solid #ff3b30;
+            text-align: center;
+        }
+        
+        .reasons {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #ff9e7d;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid #ff3b30;
+            padding-bottom: 10px;
+        }
+        
+        .reason-list {
+            list-style: none;
+        }
+        
+        .reason-list li {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(255, 59, 48, 0.15);
+            border-left: 4px solid #ff3b30;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: transform 0.3s ease;
+        }
+        
+        .reason-list li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 59, 48, 0.25);
+        }
+        
+        .call-to-action {
+            background: #1a2a6c;
+            padding: 30px;
+            text-align: center;
+            border-top: 3px solid #ff3b30;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffdd00;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff3b30;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+        
+        .cta-button:hover {
+            background: #ff1a0d;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+        
+        .footer {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+        
+        .source {
+            font-style: italic;
+            margin-top: 8px;
+            color: #777;
+        }
+        
+        .strike {
+            text-decoration: line-through;
+            color: #ff3b30;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .cta-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1>Boycott Uber</h1>
+            <div class="subtitle">Stand Against Corporate Greed & Exploitation</div>
+        </div>
+        
+        <div class="content">
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <div class="image-title">Gautam Adani with Uber CEO, Dara Khosrowshahi</div>
+                    <div class="image-description">This meeting symbolizes the unethical alliance between corporate giants at the expense of workers and consumers.</div>
+                </div>
+                <div class="image-text">
+                    <span class="strike">3rd UU, Unièc chè’ll… ààà àà 3nd Uber book chè’ll, òè’ll 3rd-Ààà 3rd Ààà 3nd-Ul</span>
+                </div>
+            </div>
+            
+            <div class="reasons">
+                <h2>Why We Must Boycott Uber</h2>
+                <ul class="reason-list">
+                    <li><strong>Exploitation of Workers:</strong> Uber drivers face unfair wages, lack of benefits, and poor working conditions.</li>
+                    <li><strong>Corporate Greed:</strong> Prioritizing profits over people, Uber continues to increase prices while cutting driver pay.</li>
+                    <li><strong>Questionable Alliances:</strong> Partnerships with controversial figures like Gautam Adani raise ethical concerns.</li>
+                    <li><strong>Undermining Labor Rights:</strong> Uber's business model actively works against worker protections and collective bargaining.</li>
+                    <li><strong>Safety Concerns:</strong> Numerous reports highlight passenger and driver safety issues that go unaddressed.</li>
+                    <li><strong>Tax Avoidance:</strong> Uber utilizes complex corporate structures to minimize tax obligations worldwide.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="call-to-action">
+            <div class="cta-title">Take Action Now!</div>
+            <p style="font-size: 1.3rem; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Delete the Uber app today and choose ethical alternatives. Support worker rights and fair business practices!
+            </p>
+            <a href="#" class="cta-button">Join the Movement</a>
+            
+            <div style="margin-top: 30px; font-size: 1.8rem; font-weight: bold; color: #ffdd00;">
+                #BoycottUber #EthicalTransport #WorkersRights
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>Together we can hold corporations accountable!</div>
+            <div class="source">Source: Vikas Tyagi - 25 Feb 2024</div>
+        </div>
+    </div>
+</body>
+</html>
